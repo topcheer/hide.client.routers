@@ -16,7 +16,7 @@ is_openwrt()
 	[ -f /etc/os-release ] && . /etc/os-release
 	[ ! -f /etc/os-release -a -f /usr/lib/os-release ] && . /usr/lib/os-release
 
-	[ "$ID" != "openwrt" ] && return 1
+	[ "$ID" != "immortalwrt" ] && return 1
 
 	major=$(echo $VERSION_ID | cut -d. -f1)
 	minor=$(echo $VERSION_ID | cut -d. -f2 | sed 's~^\([0-9]\+\).*~\1~')
